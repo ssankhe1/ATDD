@@ -1,5 +1,5 @@
 #Author: sourabh.sankhe@optum.com
-#Feature: Smoke Test ICUE Bravo
+#Feature: Smoke Test ICUE Alpha
 #Given: Login to ICUE
 #When: Some key actions
 #Then: To observe outcomes or validation
