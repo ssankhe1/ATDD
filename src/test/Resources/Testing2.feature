@@ -1,6 +1,6 @@
 #Author: sourabh.sankhe@optum.com
 #Feature: Smoke Test ICUE Bravo
-#Given: Login to ICUE
+#Given: Login to ICUE and Run a loop of Menu Options
 #When: Some key actions
 #Then: To observe outcomes or validation
 
