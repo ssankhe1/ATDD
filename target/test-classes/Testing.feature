@@ -1,14 +1,14 @@
 #Author: sourabh.sankhe@optum.com
-#Feature: Smoke Test ICUE Bravo
+#Feature: Smoke Test ICUE Alpha
 #Given: Login to ICUE
 #When: Some key actions
 #Then: To observe outcomes or validation
 
 #Sample Feature Definition 
-@smoke1
+@smoke
 Feature: Title of your feature
 	I want to use this template for my feature file
-@smoke1
+@smoke
 Scenario: Title of your scenario
 Given I want to write a step with precondition
 When I complete action
