@@ -17,9 +17,9 @@ public class Database {
 	    // Write code here that turns the phrase above into concrete actions
 	   System.out.println("Hello Connect to DB");
 	   
-String DB_URL = "DB URL";   
-String DB_USER = "test"; 
-String DB_PASSWORD = "test"; 
+String DB_URL = "jdbc:oracle:thin:@dbslt0010.uhc.com:1521:icuts021";   
+String DB_USER = "hsr_user"; 
+String DB_PASSWORD = "H2ywxZ2q"; 
 
 
 String dbClass = "oracle.jdbc.driver.OracleDriver"; 
@@ -29,7 +29,7 @@ Connection con = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 //Statement smt=(Statement) con.createStatement();
 //ResultSet rs=  ((java.sql.Statement) smt).executeQuery("select SRC_MBR_CD from mbr where mbr_id='2549001'");
 java.sql.Statement stmt = con.createStatement();
-String query = "select FST_NM from TEST where mbr_id='xyz'";
+String query = "select FST_NM from mbr where mbr_id='2566006'";
 ResultSet result = stmt.executeQuery(query);
 while (result.next()){
 	String myName = result.getString(1);								        

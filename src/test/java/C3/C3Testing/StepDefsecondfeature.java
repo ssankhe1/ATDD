@@ -60,7 +60,7 @@ public void i_validate_the_outcomes(int arg1) throws Throwable {
       	 
       	  // and getCell() specify which column to read.
       	  // getStringCellValue() specify that we are reading String data.
-      	 for (int i=0;i<5;i++)
+      	 for (int i=0;i<3;i++)
          {
       	 String MenuOption = sh1.getRow(i).getCell(0).getRawValue();
       	     	 
