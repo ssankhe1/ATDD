@@ -98,9 +98,9 @@ private WebDriver SearchMember() {
 }
 private WebDriver ClickAssessment() {
     driver.findElement(By.xpath(Assessment)).click();
-    driver.findElement(By.xpath(Provider)).click();
-    driver.findElement(By.xpath(MemberDetail)).click();
-    driver.getPageSource().contains("ACO Network Name:");
+   //driver.findElement(By.xpath(Provider)).click();
+    //driver.findElement(By.xpath(MemberDetail)).click();
+    //driver.getPageSource().contains("ACO Network Name:");
           return driver;
 	// TODO Auto-generated method stub
 }
