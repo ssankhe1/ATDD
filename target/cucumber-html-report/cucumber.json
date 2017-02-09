@@ -1,5 +1,87 @@
 [
   {
+    "id": "database-testing",
+    "tags": [
+      {
+        "name": "@smoke",
+        "line": 5
+      }
+    ],
+    "description": "",
+    "name": "Database Testing",
+    "keyword": "Feature",
+    "line": 6,
+    "elements": [
+      {
+        "id": "database-testing;database-test",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 8
+          }
+        ],
+        "description": "",
+        "name": "Database Test",
+        "keyword": "Scenario",
+        "line": 9,
+        "steps": [
+          {
+            "result": {
+              "duration": 1116903990,
+              "status": "passed"
+            },
+            "name": "Connect to DB",
+            "keyword": "Given ",
+            "line": 10,
+            "match": {
+              "location": "Database.connect_to_DB()"
+            }
+          },
+          {
+            "result": {
+              "duration": 55789,
+              "status": "passed"
+            },
+            "name": "Run a Select Query",
+            "keyword": "When ",
+            "line": 11,
+            "match": {
+              "location": "Database.run_a_Select_Query()"
+            }
+          },
+          {
+            "result": {
+              "duration": 76300,
+              "status": "passed"
+            },
+            "name": "Validate table and columns",
+            "keyword": "Then ",
+            "line": 12,
+            "match": {
+              "location": "Database.validate_table_and_columns()"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "Database.feature",
+    "comments": [
+      {
+        "value": "#Author: sourabh.sankhe@optum.com",
+        "line": 1
+      },
+      {
+        "value": "#Feature: Database Testing",
+        "line": 2
+      },
+      {
+        "value": "#Sample Feature Definition",
+        "line": 4
+      }
+    ]
+  },
+  {
     "id": "title-of-your-feature",
     "tags": [
       {
@@ -27,7 +109,7 @@
         "steps": [
           {
             "result": {
-              "duration": 17785951683,
+              "duration": 19242706372,
               "status": "passed"
             },
             "name": "I want to write a step with precondition",
@@ -39,7 +121,7 @@
           },
           {
             "result": {
-              "duration": 16726103725,
+              "duration": 15149973090,
               "status": "passed"
             },
             "name": "I complete action",
@@ -51,7 +133,7 @@
           },
           {
             "result": {
-              "duration": 1724443174,
+              "duration": 2176671546,
               "status": "passed"
             },
             "name": "I validate the outcomes",
@@ -121,7 +203,7 @@
         "steps": [
           {
             "result": {
-              "duration": 12410421275,
+              "duration": 13958155574,
               "status": "passed"
             },
             "name": "I want to write a step with precondition2",
@@ -139,7 +221,7 @@
           },
           {
             "result": {
-              "duration": 3135639345,
+              "duration": 2474731555,
               "status": "passed"
             },
             "name": "I complete action2",
@@ -157,7 +239,7 @@
           },
           {
             "result": {
-              "duration": 29795809978,
+              "duration": 21220270053,
               "status": "passed"
             },
             "name": "I validate the outcomes2",

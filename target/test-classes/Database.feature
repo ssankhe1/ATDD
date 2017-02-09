@@ -2,10 +2,10 @@
 #Feature: Database Testing
 
 #Sample Feature Definition 
-@smoke1
+@smoke
 Feature: Database Testing
 
-@smoke1
+@smoke
 Scenario: Database Test
 Given Connect to DB
 When Run a Select Query
