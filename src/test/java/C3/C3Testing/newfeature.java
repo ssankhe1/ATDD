@@ -3,11 +3,15 @@ package C3.C3Testing;
 import java.io.File;
 import java.util.Set;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.sun.jna.platform.FileUtils;
 
@@ -24,7 +28,7 @@ public class newfeature {
 	    // Write code here that turns the phrase above into concrete actions
 		driver.get("http://icuealpha.uhc.com/icue/index.jsp");
 		driver.findElement(By.id("userID")).sendKeys("SSANKHE1");
-		driver.findElement(By.id("password")).sendKeys("Mom123$%");
+		driver.findElement(By.id("password")).sendKeys("Spring123$%");
 		driver.findElement(By.name("action")).click();
 		
 	}
@@ -39,20 +43,17 @@ public class newfeature {
 		Set handles = driver.getWindowHandles();
 	    System.out.println(handles);
 	    for (String handle1 : driver.getWindowHandles()) {
-
-        	System.out.println(handle1);
-
+        	System.out.println("Current Page is : "+ handle1);
         	driver.switchTo().window(handle1);
-
-        	}
-      //driver.findElement(By.xpath("/html/body/div[1]/div[2]/form/table/tbody/tr[2]/td[1]/a[30]")).click();
-      //driver.findElement(By.xpath("/html/body/form/div[2]/table/tbody/tr[2]/td/div/table/tbody/tr/td[1]/table/tbody/tr/td[1]/input[1]")).sendKeys("test");
-      //driver.findElement(By.xpath("/html/body/form/div[2]/table/tbody/tr[2]/td/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/input")).click();
-      //String Title=driver.getTitle();
-      //System.out.println("Title of the page is below");
-      //System.out.println(Title);
-        driver.close();
-
+       	    }
+	    
+    	waitForPageLoaded();
+  driver.findElement(By.cssSelector("a[href*='http://kl.uhc.com/']")).click();      
+  //driver.findElement(By.xpath("/html/body/form/div[2]/table/tbody/tr[2]/td/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/input")).click();
+  String Title=driver.getTitle();
+  System.out.println("Title of the page is below");
+  System.out.println(Title);
+  driver.close();
 
 	}
 
@@ -62,4 +63,20 @@ public class newfeature {
 	    System.out.println("Helloworld- This is a Then Statement");
 	    driver.quit();
 	}
+	private WebDriver waitForPageLoaded() {
+        ExpectedCondition<Boolean> expectation = new
+                ExpectedCondition<Boolean>() {
+                    public Boolean apply(WebDriver driver) {
+                        return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete");
+                    }
+                };
+        try {
+            Thread.sleep(5000);
+            WebDriverWait wait = new WebDriverWait(driver, 30);
+            wait.until(expectation);
+        } catch (Throwable error) {
+            Assert.fail("Timeout waiting for Page Load Request to complete.");
+        }
+		return driver;
+    }
 }
