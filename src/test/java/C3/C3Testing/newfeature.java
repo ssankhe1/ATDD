@@ -19,7 +19,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class newfeature {
+public class newfeature extends TestingExcel{
 
 	public WebDriver driver = new FirefoxDriver();
 	String handle;
@@ -60,6 +60,8 @@ public class newfeature {
 	@Then("^validate notes$")
 	public void validate_notes() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		ExcelTest();
+		System.out.println(abc);
 	    System.out.println("Helloworld- This is a Then Statement");
 	    driver.quit();
 	}

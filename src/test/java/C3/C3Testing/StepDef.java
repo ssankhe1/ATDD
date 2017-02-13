@@ -81,7 +81,7 @@ private WebDriver Login() {
     	  }
        
     driver.findElement(By.id("userID")).sendKeys("SSANKHE1");
-    driver.findElement(By.id("password")).sendKeys("Mom123$%");
+    driver.findElement(By.id("password")).sendKeys("Spring123$%");
     driver.findElement(By.name("action")).click();
     return driver;
 }

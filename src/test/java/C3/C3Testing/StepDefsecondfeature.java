@@ -34,7 +34,7 @@ public void i_complete_action(int arg1) throws Throwable {
     System.out.println("Enter Username and Password");
      
    driver.findElement(By.id("userID")).sendKeys("SSANKHE1");
-   driver.findElement(By.id("password")).sendKeys("Mom123$%");
+   driver.findElement(By.id("password")).sendKeys("Spring123$%");
    driver.findElement(By.name("action")).click();
 }
 
