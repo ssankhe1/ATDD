@@ -1,5 +1,6 @@
 #Author: sourabh sankhe
 #Sample Feature Definition Template
+#checking Commit
 @smoke
 Feature: This is a new feature
 
