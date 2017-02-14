@@ -1,289 +1,83 @@
 [
   {
-    "id": "database-testing",
+    "id": "this-is-a-new-feature",
     "tags": [
       {
         "name": "@smoke",
-        "line": 5
+        "line": 4
       }
     ],
     "description": "",
-    "name": "Database Testing",
+    "name": "This is a new feature",
     "keyword": "Feature",
-    "line": 6,
+    "line": 5,
     "elements": [
       {
-        "id": "database-testing;database-test",
+        "id": "this-is-a-new-feature;this-is-a-new-scenario",
         "tags": [
           {
             "name": "@smoke",
-            "line": 8
+            "line": 7
           }
         ],
         "description": "",
-        "name": "Database Test",
+        "name": "This is a new scenario",
         "keyword": "Scenario",
-        "line": 9,
+        "line": 8,
         "steps": [
           {
             "result": {
-              "duration": 1116903990,
+              "duration": 15821266489,
               "status": "passed"
             },
-            "name": "Connect to DB",
+            "name": "I want to Open Alpha, Notes",
             "keyword": "Given ",
+            "line": 9,
+            "match": {
+              "location": "newfeature.i_want_to_Open_Alpha_Notes()"
+            }
+          },
+          {
+            "result": {
+              "duration": 10268310302,
+              "status": "passed"
+            },
+            "name": "Notes can be created",
+            "keyword": "When ",
             "line": 10,
             "match": {
-              "location": "Database.connect_to_DB()"
+              "location": "newfeature.notes_can_be_created()"
             }
           },
           {
             "result": {
-              "duration": 55789,
+              "duration": 2634446616,
               "status": "passed"
             },
-            "name": "Run a Select Query",
-            "keyword": "When ",
+            "name": "validate notes",
+            "keyword": "Then ",
             "line": 11,
             "match": {
-              "location": "Database.run_a_Select_Query()"
-            }
-          },
-          {
-            "result": {
-              "duration": 76300,
-              "status": "passed"
-            },
-            "name": "Validate table and columns",
-            "keyword": "Then ",
-            "line": 12,
-            "match": {
-              "location": "Database.validate_table_and_columns()"
+              "location": "newfeature.validate_notes()"
             }
           }
         ],
         "type": "scenario"
       }
     ],
-    "uri": "Database.feature",
+    "uri": "New.feature",
     "comments": [
       {
-        "value": "#Author: sourabh.sankhe@optum.com",
+        "value": "#Author: sourabh sankhe",
         "line": 1
       },
       {
-        "value": "#Feature: Database Testing",
+        "value": "#Sample Feature Definition Template",
         "line": 2
       },
       {
-        "value": "#Sample Feature Definition",
-        "line": 4
-      }
-    ]
-  },
-  {
-    "id": "title-of-your-feature",
-    "tags": [
-      {
-        "name": "@smoke",
-        "line": 8
-      }
-    ],
-    "description": "I want to use this template for my feature file",
-    "name": "Title of your feature",
-    "keyword": "Feature",
-    "line": 9,
-    "elements": [
-      {
-        "id": "title-of-your-feature;title-of-your-scenario",
-        "tags": [
-          {
-            "name": "@smoke",
-            "line": 11
-          }
-        ],
-        "description": "",
-        "name": "Title of your scenario",
-        "keyword": "Scenario",
-        "line": 12,
-        "steps": [
-          {
-            "result": {
-              "duration": 19242706372,
-              "status": "passed"
-            },
-            "name": "I want to write a step with precondition",
-            "keyword": "Given ",
-            "line": 13,
-            "match": {
-              "location": "StepDef.i_want_to_write_a_step_with_precondition()"
-            }
-          },
-          {
-            "result": {
-              "duration": 15149973090,
-              "status": "passed"
-            },
-            "name": "I complete action",
-            "keyword": "When ",
-            "line": 14,
-            "match": {
-              "location": "StepDef.i_complete_action()"
-            }
-          },
-          {
-            "result": {
-              "duration": 2176671546,
-              "status": "passed"
-            },
-            "name": "I validate the outcomes",
-            "keyword": "Then ",
-            "line": 15,
-            "match": {
-              "location": "StepDef.i_validate_the_outcomes()"
-            }
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "uri": "Testing.feature",
-    "comments": [
-      {
-        "value": "#Author: sourabh.sankhe@optum.com",
-        "line": 1
-      },
-      {
-        "value": "#Feature: Smoke Test ICUE Alpha",
-        "line": 2
-      },
-      {
-        "value": "#Given: Login to ICUE",
+        "value": "#checking Commit",
         "line": 3
-      },
-      {
-        "value": "#When: Some key actions",
-        "line": 4
-      },
-      {
-        "value": "#Then: To observe outcomes or validations",
-        "line": 5
-      },
-      {
-        "value": "#Sample Feature Definition",
-        "line": 7
-      }
-    ]
-  },
-  {
-    "id": "title-of-your-feature2",
-    "tags": [
-      {
-        "name": "@smoke",
-        "line": 8
-      }
-    ],
-    "description": "I want to use this template for my feature file",
-    "name": "Title of your feature2",
-    "keyword": "Feature",
-    "line": 9,
-    "elements": [
-      {
-        "id": "title-of-your-feature2;title-of-your-scenario2",
-        "tags": [
-          {
-            "name": "@smoke",
-            "line": 11
-          }
-        ],
-        "description": "",
-        "name": "Title of your scenario2",
-        "keyword": "Scenario",
-        "line": 12,
-        "steps": [
-          {
-            "result": {
-              "duration": 13958155574,
-              "status": "passed"
-            },
-            "name": "I want to write a step with precondition2",
-            "keyword": "Given ",
-            "line": 13,
-            "match": {
-              "arguments": [
-                {
-                  "val": "2",
-                  "offset": 40
-                }
-              ],
-              "location": "StepDefsecondfeature.i_want_to_write_a_step_with_precondition(int)"
-            }
-          },
-          {
-            "result": {
-              "duration": 2474731555,
-              "status": "passed"
-            },
-            "name": "I complete action2",
-            "keyword": "When ",
-            "line": 14,
-            "match": {
-              "arguments": [
-                {
-                  "val": "2",
-                  "offset": 17
-                }
-              ],
-              "location": "StepDefsecondfeature.i_complete_action(int)"
-            }
-          },
-          {
-            "result": {
-              "duration": 21220270053,
-              "status": "passed"
-            },
-            "name": "I validate the outcomes2",
-            "keyword": "Then ",
-            "line": 15,
-            "match": {
-              "arguments": [
-                {
-                  "val": "2",
-                  "offset": 23
-                }
-              ],
-              "location": "StepDefsecondfeature.i_validate_the_outcomes(int)"
-            }
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "uri": "Testing2.feature",
-    "comments": [
-      {
-        "value": "#Author: sourabh.sankhe@optum.com",
-        "line": 1
-      },
-      {
-        "value": "#Feature: Smoke Test ICUE Bravo",
-        "line": 2
-      },
-      {
-        "value": "#Given: Login to ICUE and Run a loop of Menu Options",
-        "line": 3
-      },
-      {
-        "value": "#When: Some key actions",
-        "line": 4
-      },
-      {
-        "value": "#Then: To observe outcomes or validation",
-        "line": 5
-      },
-      {
-        "value": "#Sample Feature Definition",
-        "line": 7
       }
     ]
   }
