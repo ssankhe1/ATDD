@@ -5,10 +5,10 @@
 #Then: To observe outcomes or validations
 
 #Sample Feature Definition 
-@smoke
+@smoke1
 Feature: Title of your feature
 	I want to use this template for my feature file
-@smoke
+@smoke1
 Scenario: Title of your scenario
 Given I want to write a step with precondition
 When I complete action
