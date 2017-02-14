@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 import com.sun.jna.platform.FileUtils;
 
@@ -19,7 +20,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class newfeature extends TestingExcel{
+public class newfeature {
 
 	public WebDriver driver = new FirefoxDriver();
 	String handle;
@@ -53,18 +54,31 @@ public class newfeature extends TestingExcel{
   String Title=driver.getTitle();
   System.out.println("Title of the page is below");
   System.out.println(Title);
-  driver.close();
+  //driver.close();
 
 	}
 
 	@Then("^validate notes$")
 	public void validate_notes() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		ExcelTest();
-		System.out.println(abc);
 	    System.out.println("Helloworld- This is a Then Statement");
-	    driver.quit();
-	}
+	    try {
+	    String ActualText= driver.findElement(By.xpath("/html/body/div/table/tbody/tr[5]/td[1]/p/span")).getText();
+	    Assert.assertEquals(ActualText, "Allergy Learning Lab");
+	    System.out.println("Text Match");
+	    
+	    } // End of try
+	    catch (Exception e) {
+		    System.out.println("Element not found" + e);
+	         Reporter.log("Element not found" +  e);
+	        driver.close();
+	 		driver.quit();
+	         Assert.fail();
+
+	       	     	    }// End of Catch
+	    driver.close();
+ 		driver.quit();
+	    		 }
 	private WebDriver waitForPageLoaded() {
         ExpectedCondition<Boolean> expectation = new
                 ExpectedCondition<Boolean>() {
