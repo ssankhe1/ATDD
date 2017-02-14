@@ -78,7 +78,7 @@ public void i_validate_the_outcomes(int arg1) throws Throwable {
       	  }
     	WebElement element = driver.findElement(By.id("header1"));
     	String strng = element.getText();
-    	Assert.assertEquals("Welcome sourabh (SSANKHE1)", strng);    	
+    	Assert.assertEquals(strng, "Welcome sourabh (SSANKHE1)");    	
 
     }
 
