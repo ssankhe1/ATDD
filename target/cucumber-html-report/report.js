@@ -59,21 +59,21 @@ formatter.match({
   "location": "newfeature.i_want_to_Open_Alpha_Notes()"
 });
 formatter.result({
-  "duration": 15808925271,
+  "duration": 15250219778,
   "status": "passed"
 });
 formatter.match({
   "location": "newfeature.notes_can_be_created()"
 });
 formatter.result({
-  "duration": 10321809012,
+  "duration": 9005961394,
   "status": "passed"
 });
 formatter.match({
   "location": "newfeature.validate_notes()"
 });
 formatter.result({
-  "duration": 2505633829,
+  "duration": 2114052061,
   "status": "passed"
 });
 });
