@@ -5,7 +5,7 @@
 #Then: To observe outcomes or validation
 
 #Sample Feature Definition 
-@smoke1
+@smoke
 Feature: Title of your feature2
 	I want to use this template for my feature file
 @smoke1
