@@ -29,7 +29,6 @@ public String password;
 	public void i_want_to_write_a_step_with_precondition() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    System.out.println("Helloworld- This is a Given Statement");
-	    ExcelTest();
 	    Login();
 	}
 @When("^I complete action$")
@@ -85,7 +84,7 @@ private WebDriver Login() {
     driver.findElement(By.name("action")).click();
     return driver;
 }
-private WebDriver SearchMember() {
+protected WebDriver SearchMember() {
 	// TODO Auto-generated method stub
     System.out.println("I am in SearchMember");
     driver.findElement(By.id("7")).click();
