@@ -35,13 +35,11 @@ public class Assertions extends TestingExcel
 	public void validate_Medical_Coverage_values() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    System.out.println("We are in Member Summary");
-	    WebElement element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/form/u:writeerror/table[2]/tbody/tr[1]/td[2]/table/tbody/tr[10]/td[1]"));
-	    String strng = element.getText();
-	    System.out.println(strng);
-	    Assert.assertEquals("ACO Network Name:", strng);
+	    String element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/form/u:writeerror/table[2]/tbody/tr[2]/td/table/tbody/tr[6]/td[1]/div[1]/div[2]/a")).getText();
+	    Assert.assertEquals("Summary", element);
 
 	}
-
+	
 
 
 }

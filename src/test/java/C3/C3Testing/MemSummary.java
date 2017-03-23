@@ -1,6 +1,8 @@
 package C3.C3Testing;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -23,7 +25,8 @@ public class MemSummary extends TestingExcel{
 	@Then("^Go to Member Summary$")
 	public void go_to_Member_Summary() throws Throwable {
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]/a/span")).click();
-	    System.out.println("I am in Member Eligibility");
-
+		WebElement element = driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]/a/span"));
+	    String strng = element.getText();
+	    Assert.assertEquals("Summary", strng);
 	}
 }
