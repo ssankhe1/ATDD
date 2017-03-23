@@ -20,7 +20,7 @@ public class TestingExcel {
 	    waitForPageLoaded();
 	    driver.findElement(By.id("memberIDTextmbrIdSearch")).sendKeys("00999072010");
 	    driver.findElement(By.name("PerformAction")).click();
-	    driver.findElement(By.xpath("/html/body/div[2]/div/form/div[3]/div/div/div/div/div[1]/div[2]/div/div/table/tbody/tr[1]/td[2]/div/a")).click();
+	    driver.findElement(By.xpath("/html/body/div[2]/div/form/div[3]/div/div/div/div/div[1]/div[2]/div/div[6]/table/tbody/tr[1]/td[2]/div/a")).click();
   return driver;
 
   
