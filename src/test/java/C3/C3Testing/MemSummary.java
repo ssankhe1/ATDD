@@ -55,23 +55,29 @@ public class MemSummary extends TestingExcel{
 	      	 
 	      	  // and getCell() specify which column to read.
 	      	  // getStringCellValue() specify that we are reading String data.
-	      	 for (int i=0;i<5;i++)
+	      	 for (int i=0;i<16;i++)
 	         {
 	      	 String MenuOption = sh1.getRow(i).getCell(0).getStringCellValue();
-	             
+	             try {
 	             if(driver.getPageSource().contains(MenuOption))
-	            // {	
+	           
 	     	        System.out.println(MenuOption +" exists on the page");
 	   	      	 	//Cell resultCell= sh1.getRow(i).getCell(1);
 	   	      	 	//resultCell.setCellValue("PASS");
-	   	      	 	//         }
-	     	    else
+	                   
+	           
+	     	    else  
 	     	    
-	     	       System.err.println(MenuOption + " is not present on the page");
-		      	 
-
-
+	     	    	Assert.fail(MenuOption + " is not present on the page");
+	     	    
+	             }
+	             catch (Exception e) {
+	    	      	 
+	  	      	   continue;
+	  	      	 
+	  	      	  } 
 	      	  }
+	      	 
 	      	 }
 	      	 catch (Exception e) {
 	      	 
