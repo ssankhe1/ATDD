@@ -91,4 +91,8 @@ public class MemSummary extends TestingExcel{
 		
 		
 	}
+	@Then("^Validate Other Values$")
+	public void validate_Other_Values() throws Throwable {
+		System.out.println("Helloworld");
+	}
 }

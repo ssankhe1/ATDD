@@ -10,3 +10,4 @@ Given I want to login to ICUE
 When I search a member
 Then Go to Member Summary
 And Validate Field Values
+And Validate Other Values
