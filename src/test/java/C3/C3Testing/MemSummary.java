@@ -68,20 +68,24 @@ public class MemSummary extends TestingExcel{
 	           
 	     	    else  
 	     	    
-	     	    	Assert.fail(MenuOption + " is not present on the page");
-	     	    
+	     	    	System.err.println(MenuOption + " is not present on the page");
+	             
 	             }
+	             
 	             catch (Exception e) {
 	    	      	 
-	  	      	   continue;
-	  	      	 
-	  	      	  } 
-	      	  }
+		  	      	   System.out.println("I am in Catch 1");
+		  	      	 
+		  	      	  }
+	            
+	              
+	             
+	      	  }// for loop ends
 	      	 
 	      	 }
 	      	 catch (Exception e) {
 	      	 
-	      	   System.out.println(e.getMessage());
+	      	   System.out.println("I am in Catch 2");
 	      	 
 	      	  }
 		
