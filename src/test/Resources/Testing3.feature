@@ -2,10 +2,10 @@
 #Keywords Summary :
 
 #Sample Feature Definition Template
-@smoke1
+@smoke
 Feature: Checking Assertions
 
-@smoke1
+@smoke
 Scenario: Assertions
 Given I want to navigate to Member Summary
 When Member has a Medical Coverage

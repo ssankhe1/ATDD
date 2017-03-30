@@ -1,10 +1,10 @@
 #Author: sourabh sankhe
 #Sample Feature Definition Template
 #checking Commit
-@smoke1
+@smoke
 Feature: This is a new feature
 
-@smoke1
+@smoke
 Scenario: This is a new scenario
 Given I want to Open Alpha, Notes
 	When Notes can be created
