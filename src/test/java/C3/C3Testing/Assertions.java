@@ -37,7 +37,7 @@ public class Assertions extends TestingExcel
 	    System.out.println("We are in Member Summary");
 	    String element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/form/u:writeerror/table[2]/tbody/tr[2]/td/table/tbody/tr[6]/td[1]/div[1]/div[2]/a")).getText();
 	    Assert.assertEquals("Summary", element);
-
+driver.close();
 	}
 	
 
