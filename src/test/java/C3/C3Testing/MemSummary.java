@@ -9,6 +9,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -93,8 +94,10 @@ public class MemSummary extends TestingExcel{
 	}
 	@Then("^Validate Other Values$")
 	public void validate_Other_Values() throws Throwable {
-		System.out.println("Helloworld");
-		driver.close();
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/ul/li[5]/a")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/ul/li[5]/ul/li[5]")).click();
+		driver.findElement(By.id("47")).click();
+		driver.findElement(By.xpath("//table[@id='main']//a[@id='uiPageSettingName']")).sendKeys("Sourabhs Preference");
 
 	}
 }
