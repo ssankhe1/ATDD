@@ -97,7 +97,7 @@ public class MemSummary extends TestingExcel{
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/ul/li[5]/a")).click();
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/ul/li[5]/ul/li[5]")).click();
 		driver.findElement(By.id("47")).click();
-		driver.findElement(By.xpath("//table[@id='main']//a[@id='uiPageSettingName']")).sendKeys("Sourabhs Preference");
+		//driver.findElement(By.xpath("//table[@id='main']//a[@id='uiPageSettingName']")).sendKeys("Sourabhs Preference");
 
 	}
 }

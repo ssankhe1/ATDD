@@ -14,6 +14,9 @@ public class TestingExcel {
   
 		//driver.get("http://icuealpha.uhc.com/icue/index.jsp");
 		driver.get("http://icuedev.uhc.com/icue/index.jsp");
+
+		try
+		{
 		driver.findElement(By.id("userID")).sendKeys("SSANKHE1");
 		driver.findElement(By.id("password")).sendKeys("Spring123$%");
 		driver.findElement(By.name("action")).click();
@@ -27,8 +30,14 @@ public class TestingExcel {
 	    //driver.findElement(By.xpath("/html/body/div[2]/div/form/div[3]/div/div/div/div/div[1]/div[2]/div/div[6]/table/tbody/tr[1]/td[2]/div/a")).click();
 	    driver.findElement(By.xpath("/html/body/div[2]/div/form/div[3]/div/div/div/div/div[1]/div[2]/div/div[7]/table/tbody/tr[1]/td[2]")).click();
 
-	    return driver;
-
+		}
+		catch(Exception e1){
+			 
+            Assert.fail("Dev Environment is down");
+	 
+		}
+		return driver;
+		
   
  }
 	private WebDriver waitForPageLoaded() {
