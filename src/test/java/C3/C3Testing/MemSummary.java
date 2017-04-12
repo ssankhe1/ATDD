@@ -10,6 +10,7 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -94,10 +95,20 @@ public class MemSummary extends TestingExcel{
 	}
 	@Then("^Validate Other Values$")
 	public void validate_Other_Values() throws Throwable {
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/ul/li[5]/a")).click();
-		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/ul/li[5]/ul/li[5]")).click();
-		driver.findElement(By.id("47")).click();
-		//driver.findElement(By.xpath("//table[@id='main']//a[@id='uiPageSettingName']")).sendKeys("Sourabhs Preference");
+		Select Preference = new Select(driver.findElement(By.id("selectedPageSetting")));
+		Preference.selectByValue("-1");
+		Select SummaryPreference = new Select(driver.findElement(By.id("selectedPageSetting")));
+		SummaryPreference.selectByValue("1007");
+		WebElement element = driver.findElement(By.xpath("/html/body/div[2]/div[3]/form/table/tbody/tr/td[1]/ul/li[2]/table/tbody/tr[1]/td[1]")); 
+		WebElement target = driver.findElement(By.id("uiPageContainerA"));
+		(new Actions(driver)).dragAndDrop(element, target).perform();
+		Select Dropdown = new Select(driver.findElement(By.id("action")));
+		Dropdown.selectByValue("saveUiPageSetting");
+		driver.findElement(By.name("PerformAction")).click();
+		driver.findElement(By.xpath("/html/body/div[2]/div[3]/form/p[1]/a")).click();
+		driver.findElement(By.id("cpmNotesSection")).click();
 
+		
+		
 	}
 }
