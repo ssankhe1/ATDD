@@ -88,27 +88,24 @@ public class MemSummary extends TestingExcel{
 	      	 catch (Exception e) {
 	      	 
 	      	   System.out.println("I am in Catch 2");
-	      	 
+     	 
 	      	  }
-		
-		
 	}
 	@Then("^Validate Other Values$")
 	public void validate_Other_Values() throws Throwable {
 		Select Preference = new Select(driver.findElement(By.id("selectedPageSetting")));
 		Preference.selectByValue("-1");
-		Select SummaryPreference = new Select(driver.findElement(By.id("selectedPageSetting")));
-		SummaryPreference.selectByValue("1007");
+		//Select SummaryPreference = new Select(driver.findElement(By.id("selectedPageSetting")));
+		//SummaryPreference.selectByValue("1007");
 		WebElement element = driver.findElement(By.xpath("/html/body/div[2]/div[3]/form/table/tbody/tr/td[1]/ul/li[2]/table/tbody/tr[1]/td[1]")); 
 		WebElement target = driver.findElement(By.id("uiPageContainerA"));
 		(new Actions(driver)).dragAndDrop(element, target).perform();
+		driver.findElement(By.id("uiPageSettingName")).sendKeys("Testing with Automation");
 		Select Dropdown = new Select(driver.findElement(By.id("action")));
 		Dropdown.selectByValue("saveUiPageSetting");
 		driver.findElement(By.name("PerformAction")).click();
-		driver.findElement(By.xpath("/html/body/div[2]/div[3]/form/p[1]/a")).click();
-		driver.findElement(By.id("cpmNotesSection")).click();
-
-		
-		
+		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[2]/a"));// Member Details Tab
+		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]"));// Member Summary
+	
 	}
 }
