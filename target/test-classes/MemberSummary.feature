@@ -11,3 +11,9 @@ When I search a member
 Then Go to Member Summary
 And Validate Field Values
 And Validate Other Values
+
+@smoke
+Scenario: Member Summary Configuration Page
+Given I am on Member Summary Page
+When Add new Preference
+Then Validate preference in Member Summary

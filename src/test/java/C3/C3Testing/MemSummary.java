@@ -108,4 +108,6 @@ public class MemSummary extends TestingExcel{
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]"));// Member Summary
 	
 	}
+	
+	
 }
