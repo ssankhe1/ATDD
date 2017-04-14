@@ -17,6 +17,8 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class MemSummary extends TestingExcel{
+	//Begin Scenario 1
+
 	@Given("^I want to login to ICUE$")
 	public void i_want_to_login_to_ICUE() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -108,6 +110,26 @@ public class MemSummary extends TestingExcel{
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]"));// Member Summary
 	
 	}
-	
+	//Begin Scenario 2
+	@Given("^I am on Member Summary Page$")
+	public void i_am_on_Member_Summary_Page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+     	   System.out.println("I am in Scenario 2");
+
+	}
+
+	@When("^Add new Preference$")
+	public void add_new_Preference() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	      System.out.println("I am in Scenario 2");
+
+	}
+
+	@Then("^Validate preference in Member Summary$")
+	public void validate_preference_in_Member_Summary() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+     	   System.out.println("I am in Scenario 2");
+
+	}
 	
 }
