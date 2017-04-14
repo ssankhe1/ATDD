@@ -12,13 +12,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class MemSummary extends TestingExcel{
 	//Begin Scenario 1
-
+	
 	@Given("^I want to login to ICUE$")
 	public void i_want_to_login_to_ICUE() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -65,7 +66,7 @@ public class MemSummary extends TestingExcel{
 	             try {
 	             if(driver.getPageSource().contains(MenuOption))
 	           
-	     	        System.out.println(MenuOption +" exists on the page");
+	     	        System.out.println(MenuOption +" field exists on the page");
 	   	      	 	//Cell resultCell= sh1.getRow(i).getCell(1);
 	   	      	 	//resultCell.setCellValue("PASS");
 	                   
@@ -108,28 +109,80 @@ public class MemSummary extends TestingExcel{
 		driver.findElement(By.name("PerformAction")).click();
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[2]/a"));// Member Details Tab
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]"));// Member Summary
-	
+		driver.quit();
 	}
+	
 	//Begin Scenario 2
 	@Given("^I am on Member Summary Page$")
 	public void i_am_on_Member_Summary_Page() throws Throwable {
+		ExcelTest(driver);
+		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]/a/span")).click();
+		Select Preference = new Select(driver.findElement(By.id("selectedPageSetting")));
+		Preference.selectByValue("-1");		
 	    // Write code here that turns the phrase above into concrete actions
-     	   System.out.println("I am in Scenario 2");
-
+     	   System.out.println("Validate all Components are present on Member Summary Configuration Page");
+     	   
+     	  try {
+	      	  // Specify the path of file
+	      	  File src=new File("C:\\Users\\ssankhe1\\workspacemars\\C3Testing\\src\\test\\DataSheets\\MembersummaryConfig.xlsx");
+	    	 
+	      	   // load file
+	      	   FileInputStream fis=new FileInputStream(src);
+	      	 
+	      	   // Load workbook
+	      	   XSSFWorkbook wb=new XSSFWorkbook(fis);
+	      	   
+	      	   // Load sheet- Here we are loading first sheetonly
+	      	   XSSFSheet sh1= wb.getSheetAt(0);    	 
+	      	  // getRow() specify which row we want to read.
+	      	 
+	      	  // and getCell() specify which column to read.
+	      	  // getStringCellValue() specify that we are reading String data.
+	      	 for (int i=0;i<20;i++)
+	         {
+	      	 String MenuOption = sh1.getRow(i).getCell(0).getStringCellValue();
+	             try {
+	             if(driver.getPageSource().contains(MenuOption))
+	           
+	     	        System.out.println(MenuOption +" Component exists on the page");
+	   	      	 	//Cell resultCell= sh1.getRow(i).getCell(1);
+	   	      	 	//resultCell.setCellValue("PASS");
+	                   
+	           
+	     	    else  
+	     	    
+	     	    	System.err.println(MenuOption + " is not present on the page");
+	             
+	             }
+	             
+	             catch (Exception e) {
+	    	      	 
+		  	      	   System.out.println("I am in Catch 1");
+		  	      	 
+		  	      	  }
+	            
+	              
+	             
+	      	  }// for loop ends
+	      	 
+	      	 }
+	      	 catch (Exception e) {
+	      	 
+	      	   System.out.println("I am in Catch 2");
+     	 
+	      	  }
 	}
 
 	@When("^Add new Preference$")
 	public void add_new_Preference() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	      System.out.println("I am in Scenario 2");
-
 	}
 
 	@Then("^Validate preference in Member Summary$")
 	public void validate_preference_in_Member_Summary() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
      	   System.out.println("I am in Scenario 2");
-
 	}
 	
 }

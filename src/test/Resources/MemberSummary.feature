@@ -16,3 +16,4 @@ Scenario: Member Summary Configuration Page
 Given I am on Member Summary Page
 When Add new Preference
 Then Validate preference in Member Summary
+
