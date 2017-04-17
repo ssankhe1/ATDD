@@ -4,7 +4,7 @@
 #Scenario: Business rule through list of steps with arguments.
 
 @tag
-Feature: Login to my website
+Feature: Login to my website (2)
 	
 Scenario: Login to my website
 Given User Open Firefox
