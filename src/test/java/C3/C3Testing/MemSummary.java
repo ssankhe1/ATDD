@@ -2,12 +2,15 @@ package C3.C3Testing;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.Set;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -39,7 +42,12 @@ public class MemSummary extends TestingExcel{
 	    //String strng = element.getText();
 	    //System.out.println(strng);
 	    //Assert.assertEquals("Summary", strng);
-	    
+		//WarningMessage(driver);	
+		//driver.findElement(By.cssSelector("input[type='button'][value='Continue Action']")).click();
+		//driver.findElement(By.className("ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-dialog-buttons"));
+		driver.switchTo().activeElement().click();
+		driver.switchTo().activeElement();
+
 	}
 	
 	@Then("^Validate Field Values$")
@@ -100,7 +108,7 @@ public class MemSummary extends TestingExcel{
 		Preference.selectByValue("-1");
 		//Select SummaryPreference = new Select(driver.findElement(By.id("selectedPageSetting")));
 		//SummaryPreference.selectByValue("1007");
-		WebElement element = driver.findElement(By.xpath("/html/body/div[2]/div[3]/form/table/tbody/tr/td[1]/ul/li[2]/table/tbody/tr[1]/td[1]")); 
+		WebElement element = driver.findElement(By.xpath("/html/body/div[2]/div[3]/form/table/tbody/tr/td[1]/ul/li[1]")); 
 		WebElement target = driver.findElement(By.id("uiPageContainerA"));
 		(new Actions(driver)).dragAndDrop(element, target).perform();
 		driver.findElement(By.id("uiPageSettingName")).sendKeys("Testing with Automation");
@@ -117,6 +125,11 @@ public class MemSummary extends TestingExcel{
 	public void i_am_on_Member_Summary_Page() throws Throwable {
 		ExcelTest(driver);
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]/a/span")).click();
+		//WarningMessage(driver);	
+		driver.switchTo().activeElement().click();
+		driver.switchTo().activeElement();
+		
+		
 		Select Preference = new Select(driver.findElement(By.id("selectedPageSetting")));
 		Preference.selectByValue("-1");		
 	    // Write code here that turns the phrase above into concrete actions
@@ -171,6 +184,35 @@ public class MemSummary extends TestingExcel{
 	      	   System.out.println("I am in Catch 2");
      	 
 	      	  }
+	}
+
+	private WebDriver WarningMessage(WebDriver driver) {
+		// TODO Auto-generated method stub
+		String handle= driver.getWindowHandle();
+		 
+        System.out.println(handle);
+
+        // Click on the Button "New Message Window"
+
+        driver.findElement(By.xpath("/html/body/div[9]/div[3]/div/button[1]")).click();
+
+        // Store and Print the name of all the windows open	              
+
+        Set handles = driver.getWindowHandles();
+
+        System.out.println(handles);
+
+        // Pass a window handle to the other window
+
+        for (String handle1 : driver.getWindowHandles()) {
+
+        	System.out.println(handle1);
+
+        	driver.switchTo().window(handle1);
+
+        	}
+        return driver;
+		
 	}
 
 	@When("^Add new Preference$")

@@ -2,7 +2,7 @@
 
 @smoke
 Feature: Member Summary
-	I want to use this template for my feature file
+	I want to use this template for my feature file<>
 
 
 Scenario: Member Summary
