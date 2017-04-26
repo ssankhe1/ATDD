@@ -9,6 +9,10 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestingExcel {
+	public static  String MemberSummary="/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]";
+	public static  String MemberDetail="/html/body/div[2]/div[1]/span[1]/div/div/ul/li[2]";
+	
+	
 	public WebDriver driver = new FirefoxDriver();
 	public WebDriver ExcelTest(WebDriver driver) throws Throwable{
   
@@ -56,4 +60,6 @@ public class TestingExcel {
         }
 		return driver;
     }
+	
+
 }

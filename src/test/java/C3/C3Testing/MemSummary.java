@@ -2,11 +2,13 @@ package C3.C3Testing;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.text.SimpleDateFormat;
 import java.util.Set;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.xerces.util.URI;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -15,6 +17,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import com.google.gson.JsonObject;
+import com.rallydev.rest.RallyRestApi;
+import com.rallydev.rest.request.CreateRequest;
+import com.rallydev.rest.request.QueryRequest;
+import com.rallydev.rest.response.CreateResponse;
+import com.rallydev.rest.response.QueryResponse;
+import com.rallydev.rest.util.Fetch;
+import com.rallydev.rest.util.QueryFilter;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -23,6 +33,8 @@ import cucumber.api.java.en.When;
 public class MemSummary extends TestingExcel{
 	//Begin Scenario 1
 	
+	private static final String TCID = null;
+
 	@Given("^I want to login to ICUE$")
 	public void i_want_to_login_to_ICUE() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -218,13 +230,17 @@ public class MemSummary extends TestingExcel{
 	@When("^Add new Preference$")
 	public void add_new_Preference() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	      System.out.println("I am in Scenario 2");
+        driver.findElement(By.xpath(MemberSummary)).click();
+        driver.findElement(By.xpath(MemberDetail)).click();
+
 	}
 
 	@Then("^Validate preference in Member Summary$")
 	public void validate_preference_in_Member_Summary() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
      	   System.out.println("I am in Scenario 2");
+  
+     	   
 	}
 	
 }

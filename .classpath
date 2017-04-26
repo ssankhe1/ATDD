@@ -25,5 +25,6 @@
 	<classpathentry kind="lib" path="C:/Users/ssankhe1/Desktop/ATDD Cloud/mysql-jdbc-5.1.10.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ssankhe1/Desktop/ATDD Cloud/mysql-connector-java-3.1.14-bin-g.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ssankhe1/Desktop/ATDD Cloud/jdbc-oracle.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ssankhe1/Desktop/ATDD Cloud/rally-rest-api-2.2.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
