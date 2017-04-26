@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TestingExcel {
+public class TestingExcel extends Rally{
 	public static  String MemberSummary="/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]";
 	public static  String MemberDetail="/html/body/div[2]/div[1]/span[1]/div/div/ul/li[2]";
 	
@@ -17,12 +17,12 @@ public class TestingExcel {
 	public WebDriver ExcelTest(WebDriver driver) throws Throwable{
   
 		//driver.get("http://icuealpha.uhc.com/icue/index.jsp");
-		driver.get("http://icuemaster.uhc.com/icue/index.jsp");
+		driver.get("http://icuecharlie.uhc.com/icue/index.jsp");
 		driver.manage().window().maximize();
 		//try
 		//{
 		driver.findElement(By.id("userID")).sendKeys("SSANKHE1");
-		driver.findElement(By.id("password")).sendKeys("Spring123$%");
+		driver.findElement(By.id("password")).sendKeys("Summer123$%");
 		driver.findElement(By.name("action")).click();
 	    //driver.findElement(By.id("7")).click();
 		driver.findElement(By.xpath("/html/body/div[1]/div/div/div/ul/li[3]/a")).click();

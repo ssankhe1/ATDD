@@ -33,7 +33,6 @@ import cucumber.api.java.en.When;
 public class MemSummary extends TestingExcel{
 	//Begin Scenario 1
 	
-	private static final String TCID = null;
 
 	@Given("^I want to login to ICUE$")
 	public void i_want_to_login_to_ICUE() throws Throwable {
@@ -129,7 +128,7 @@ public class MemSummary extends TestingExcel{
 		driver.findElement(By.name("PerformAction")).click();
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[2]/a"));// Member Details Tab
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]"));// Member Summary
-		driver.quit();
+		driver.close();
 	}
 	
 	//Begin Scenario 2
@@ -193,7 +192,7 @@ public class MemSummary extends TestingExcel{
 	      	 }
 	      	 catch (Exception e) {
 	      	 
-	      	   System.out.println("I am in Catch 2");
+	      	   System.out.println("I am in Catch 2 why?");
      	 
 	      	  }
 	}
@@ -232,13 +231,16 @@ public class MemSummary extends TestingExcel{
 	    // Write code here that turns the phrase above into concrete actions
         driver.findElement(By.xpath(MemberSummary)).click();
         driver.findElement(By.xpath(MemberDetail)).click();
+       
 
 	}
 
 	@Then("^Validate preference in Member Summary$")
 	public void validate_preference_in_Member_Summary() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-     	   System.out.println("I am in Scenario 2");
+     	   System.out.println("Updating Test Case Results");
+     	  Rally.main(null);
+     	       	  driver.close();
   
      	   
 	}
