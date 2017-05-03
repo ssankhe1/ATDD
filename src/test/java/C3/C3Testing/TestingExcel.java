@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TestingExcel extends Rally{
+public class TestingExcel {
 	public static  String MemberSummary="/html/body/div[2]/div[1]/span[1]/div/div/ul/li[1]";
 	public static  String MemberDetail="/html/body/div[2]/div[1]/span[1]/div/div/ul/li[2]";
 	

@@ -1,6 +1,6 @@
 #Author: Sourabh Sankhe
 
-@smoke
+@smoke1
 Feature: Member Summary
 	I want to use this template for my feature file<>
 

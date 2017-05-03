@@ -240,8 +240,7 @@ public class MemSummary extends TestingExcel{
 	public void validate_preference_in_Member_Summary() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
      	   System.out.println("Updating Test Case Results");
-     	  Rally.main(null);
-     	       	  driver.close();
+     	   driver.close();
   
      	   
 	}
