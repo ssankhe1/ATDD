@@ -122,6 +122,7 @@ public class MemSummary extends TestingExcel{
 		WebElement element = driver.findElement(By.xpath("/html/body/div[2]/div[3]/form/table/tbody/tr/td[1]/ul/li[1]")); 
 		WebElement target = driver.findElement(By.id("uiPageContainerA"));
 		(new Actions(driver)).dragAndDrop(element, target).perform();
+		
 		driver.findElement(By.id("uiPageSettingName")).sendKeys("Testing with Automation");
 		Select Dropdown = new Select(driver.findElement(By.id("action")));
 		Dropdown.selectByValue("saveUiPageSetting");

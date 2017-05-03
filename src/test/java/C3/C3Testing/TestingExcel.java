@@ -17,7 +17,7 @@ public class TestingExcel extends Rally{
 	public WebDriver ExcelTest(WebDriver driver) throws Throwable{
   
 		//driver.get("http://icuealpha.uhc.com/icue/index.jsp");
-		driver.get("http://icuecharlie.uhc.com/icue/index.jsp");
+		driver.get("http://icuemaster.uhc.com/icue/index.jsp");
 		driver.manage().window().maximize();
 		//try
 		//{
